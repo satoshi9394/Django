@@ -1,8 +1,11 @@
-"""Posts views"""
+"""Posts views."""
+
+# Django
 from django.shortcuts import render
+
+# Utilities
 from datetime import datetime
 
-# Create your views here.
 
 posts = [
     {
@@ -35,6 +38,6 @@ posts = [
 ]
 
 
-
 def list_posts(request):
-    return render(request,'feed.html',{'posts':posts})
+    """List existing posts."""
+    return render(request, 'feed.html', {'posts': posts})
